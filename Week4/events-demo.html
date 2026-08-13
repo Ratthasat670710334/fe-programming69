@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<body>
+
+    <!-- สร้างมัน -->
+    <h2 id="hover">เอาเมาส์มาชี้</h2> <!-- สร้าง id ชื่อ HH -->
+    <input type="text" id="RealtimeInput" placeholder="พิมพ์เพื่อดู event: input" />
+    <p id="count">0 ตัว</p>
+
+</body>
+
+<script>
+    //mouse
+    const h = document.getElementById("hover");
+
+    h.addEventListener("mouseover", () => h.style.color = "red");
+    h.addEventListener("mouseout", () => h.style.color = "black");
+
+
+    // input: ทำงานทุกครั้งที่ตัวอักษรเปลี่ยน
+    const box = document.getElementById("RealtimeInput");
+    const counter = document.getElementById("count");
+
+
+    box.addEventListener("input", (e) => {
+        count.textContent = `${e.target.value.length} ตัวอักษร`;
+        if (e.target.value.length == 20){
+            alert ("Nigga Heil Hitler");
+        }
+    });
+
+
+    // DOMContentLoaded: รันเมื่อ DOM พร้อม
+    document.addEventListener("DOMContentLoaded", () => {
+        console.log("DOM พร้อมใช้งานแล้ว!");
+    });
+</script>

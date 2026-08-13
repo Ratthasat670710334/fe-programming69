@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<body>
+    <div id="parent" style="padding:30px; background:#dbeafe">
+        กล่องแม่
+        <button id="child">ปุ่มลูก</button>
+    </div>
+</body>
+
+<script>
+    const HH = "Heil Hitler";
+    document.getElementById("parent").addEventListener("click", () => {
+        console.log("2) ใครพูดว่า " + HH);
+    });
+
+    document.getElementById("child").addEventListener("click", (e) => {
+        console.log("1) ปุ่มลูกถูกคลิก");
+        alert (HH);
+        // ถ้าไม่อยากให้ลอยขึ้นไป: e.stopPropagation();
+    });
+</script>
